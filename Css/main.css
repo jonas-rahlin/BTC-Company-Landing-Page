@@ -13,11 +13,6 @@
   display: none !important;
 }
 
-.fadeout {
-  -webkit-animation: fade-out-top 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: fade-out-top 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -180,32 +175,6 @@ header nav #nav-logo {
   cursor: pointer;
 }
 
-@-webkit-keyframes fade-out-top {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-}
-
-@keyframes fade-out-top {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(-50px);
-    transform: translateY(-50px);
-    opacity: 0;
-  }
-}
-
 header nav #nav-logo__logo span {
   color: #2d5d86;
 }
@@ -240,7 +209,7 @@ header nav #nav-list .nav-list__item a:hover {
 }
 
 #hero {
-  background-image: url(https://images.unsplash.com/photo-1579407364450-481fe19dbfaa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80);
+  background-image: url(https://images.unsplash.com/photo-1518546305927-5a555bb7020d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -250,7 +219,7 @@ header nav #nav-list .nav-list__item a:hover {
 
 #hero-background {
   background: #104750;
-  background: linear-gradient(167deg, #104750 20%, rgba(74, 112, 119, 0.829867) 50%);
+  background: linear-gradient(167deg, #104750 10%, rgba(74, 112, 119, 0.829867) 50%);
   height: 100%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 66%);
           clip-path: polygon(0 0, 100% 0, 100% 95%, 0 66%);
