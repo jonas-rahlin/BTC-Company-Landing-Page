@@ -1,0 +1,23 @@
+$font-a: roboto;
+$font-b: ubuntu;
+
+$black: rgb(14, 13, 13);
+$white: #f7f7f7;
+$main: #104750;
+$secondary: #2d5d86;
+$third: rgb(172, 95, 150);
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.display{
+    display:block !important;
+}
+
+.undisplay{
+    display:none !important;
+}
