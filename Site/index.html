@@ -23,18 +23,30 @@
                     </span>
                   </button>
             </div>
-            <ul id="nav-list">
-                <li class="nav-list__item"><a href="">Services</a></li>
-                <li class="nav-list__item"><a href="">Team</a></li>
-                <li class="nav-list__item"><a href="">Contact</a></li>
+            <ul id="nav-list" class="closed">
+                <li class="nav-list__item"><a class="nav-list__a" href="">Services</a></li>
+                <li class="nav-list__item"><a class="nav-list__a" href="">Team</a></li>
+                <li class="nav-list__item"><a class="nav-list__a" href="">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="hero">
             <div id="hero-background">
-                <article id="info-bar">
-                    <span style="float:right"; id="infor-bar__price">$ 4.99</span>
+                <article id="info">
+                    <div id="info-container">
+                        <span id="info-container__price">1 BTC = $51009.70</span>      
+                        <form>
+                            <select id="info-container__currency" name = "currency-type">
+                            <option value = "USD" selected>USD</option>
+                            <option value = "GBP">GBP</option>
+                            <option value = "EURO">EUR</option>
+                            <option value = "JPY">JPY</option>
+                            <option value = "AUS">AUS</option>
+                            <option value = "NZD">NZD</option>
+                            </select>
+                        </form>
+                    </div>
                 </article>
             </div>
         </section>

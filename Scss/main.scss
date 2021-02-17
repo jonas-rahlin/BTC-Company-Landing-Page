@@ -5,7 +5,8 @@ body{
     font-family:$font-a;
     color:$black;
     background:$white;
-    height:150vh;
+    height:200vh;
+    margin:auto;
 }
 
 header{
@@ -22,7 +23,7 @@ header{
     
         #nav-logo{
             font-family: $font-b;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight:600;
             height:100%;
             display:flex;
@@ -32,6 +33,7 @@ header{
             cursor:pointer;
 
             &__logo{
+                color:$white;
             }
     
             &__logo span{
@@ -47,23 +49,38 @@ header{
             list-style: none;
             text-align:center;
             padding:1rem;
-            display:none;
-    
+            transition: all 0.3s ease-in-out;
+
+            &.open{
+                transform:translateY(0);
+            }
+
+            &.closed{
+                transform:translateY(-40vh);
+            }
+
             .nav-list__item{
                 border-bottom:solid 1px rgba(255, 255, 255, 0.100);
                 padding-bottom:0.5rem;
                 padding-top:1rem;
+
+                &.black-text{
+                    border-bottom:solid 1px rgba(0, 0, 0, 0.100);
+                }
             }
     
-            .nav-list__item a{
+            .nav-list__a{
                 color:$white;
                 text-decoration: none;
-                font-weight: lighter;
+                font-weight:300;
+
+                &.black-text{
+                    color:$black !important;
+                    font-weight:400;
+                }
 
                 &:hover{
-                    color:$third;
-                    font-weight:500;
-                    text-shadow: 0px 0px 1px $third 30%;
+                    font-size: 0.9rem;
                 }
             }
         }
@@ -71,26 +88,47 @@ header{
 }
 
 #hero{
-    background-image: url(https://images.unsplash.com/photo-1518546305927-5a555bb7020d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80);
+    background-image: url(../Assets/hero.jpg);
     background-position: center;
     background-size: cover;
+    background-color:$main;
     height:100vh;
-    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 66%);
-
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 66%);
+    margin:auto;
     &-background{
         background: $main;
-        background: linear-gradient(167deg, rgb(16, 71, 80) 10%, rgba(74,112,119,0.8298669809720763) 50%);
+        background: linear-gradient(167deg, $main 10%, rgba(74,112,119,0.8298669809720763) 50%);
         height:100%;
         clip-path: polygon(0 0, 100% 0, 100% 95%, 0 66%);
-
     }
 
-    #info-bar{
+    #info{
         border-top:solid 1px $white;
         opacity:75%;
         position:relative;
         top:5rem;
         margin:0 1rem;
         padding:0.5rem 0;
+
+        &-container{
+            display:flex;
+            flex-direction:row;
+            justify-content: center;
+            align-items: center;
+            &__price{
+                font-size:1.5rem;
+            }
+    
+            &__currency{
+                display:inline;
+                width:4rem;
+                background-color: rgba(0, 0, 255, 0);
+                border-radius: 3px;
+                font-weight:300;
+                opacity:80%;
+                margin-left:1rem;
+            }
+        }
+
     }
 }

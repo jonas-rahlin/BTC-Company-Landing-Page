@@ -1,11 +1,10 @@
 $font-a: roboto;
 $font-b: ubuntu;
 
-$black: rgb(14, 13, 13);
+$black: #0e0d0d;
 $white: #f7f7f7;
 $main: #104750;
-$secondary: #2d5d86;
-$third: rgb(172, 95, 150);
+$secondary: #cfe93b;
 
 
 *{
@@ -14,10 +13,19 @@ $third: rgb(172, 95, 150);
     padding:0;
 }
 
+.open{
+    visibility:visible;
+}
+
+.closed{
+    visibility:hidden;
+}
+
 .display{
-    display:block !important;
+    display:block;
 }
 
 .undisplay{
-    display:none !important;
+    display:none;
 }
+
