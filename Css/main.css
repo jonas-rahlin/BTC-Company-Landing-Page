@@ -5,6 +5,13 @@
   padding: 0;
 }
 
+html {
+  font-size: 16px;
+  font-family: roboto;
+  color: #0e0d0d;
+  background: #f7f7f7;
+}
+
 .open {
   visibility: visible;
 }
@@ -135,11 +142,7 @@
 }
 
 body {
-  font-family: roboto;
-  color: #0e0d0d;
-  background: #f7f7f7;
   height: 200vh;
-  margin: auto;
 }
 
 header {
@@ -284,7 +287,7 @@ header nav #nav-list .nav-list__a:hover {
 }
 
 #hero #info-container__price {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 #hero #info-container__currency {

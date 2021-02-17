@@ -2,11 +2,7 @@
 @import "hamburger";
 
 body{
-    font-family:$font-a;
-    color:$black;
-    background:$white;
     height:200vh;
-    margin:auto;
 }
 
 header{
@@ -116,7 +112,7 @@ header{
             justify-content: center;
             align-items: center;
             &__price{
-                font-size:1.5rem;
+                font-size:1.2rem;
             }
     
             &__currency{

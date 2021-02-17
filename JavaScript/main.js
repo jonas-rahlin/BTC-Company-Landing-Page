@@ -18,10 +18,10 @@ window.onscroll = function() {
     const logo = document.querySelector("#nav-logo__logo");
     const menuAnchors = document.querySelectorAll(".nav-list__a");
     const menuItems = document.querySelectorAll(".nav-list__item");
-    if (window.pageYOffset > 120 && !logo.classList.contains("undisplay")) {
+    if (window.pageYOffset > 80 && !logo.classList.contains("undisplay")) {
         logo.classList.add("undisplay");
     }
-    else if (window.pageYOffset < 120) {
+    else if (window.pageYOffset < 80) {
         logo.classList.remove("undisplay");
     }
     else if (window.pageYOffset > 280 && !menuAnchors[0].classList.contains("black-text")) {
