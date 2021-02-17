@@ -24,7 +24,7 @@ window.onscroll = function() {
     else if (window.pageYOffset < 120) {
         logo.classList.remove("undisplay");
     }
-    else if (window.pageYOffset > 300 && !menuAnchors[0].classList.contains("black-text")) {
+    else if (window.pageYOffset > 280 && !menuAnchors[0].classList.contains("black-text")) {
         menuAnchors.forEach(element => {
             element.classList.add("black-text");
         });
@@ -32,7 +32,7 @@ window.onscroll = function() {
             element.classList.add("black-text");
         });
     }
-    else if (window.pageYOffset < 300) {
+    else if (window.pageYOffset < 280) {
         menuAnchors.forEach(element => {
             element.classList.remove("black-text");
         });
