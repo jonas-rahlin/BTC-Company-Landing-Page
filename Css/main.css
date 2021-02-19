@@ -143,6 +143,9 @@ html {
 
 body {
   height: 200vh;
+  width: 95%;
+  margin: auto;
+  background: #f7f7f7;
 }
 
 header {
@@ -162,7 +165,7 @@ header nav {
           align-items: center;
   height: 5rem;
   position: fixed;
-  width: 100%;
+  width: 95%;
   padding: 1rem;
 }
 

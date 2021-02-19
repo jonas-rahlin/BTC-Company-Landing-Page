@@ -3,6 +3,9 @@
 
 body{
     height:200vh;
+    width:95%;
+    margin:auto;
+    background:$white;
 }
 
 header{
@@ -14,7 +17,7 @@ header{
         align-items:center;
         height:5rem;
         position:fixed;
-        width:100%;
+        width:95%;
         padding:1rem;
     
         #nav-logo{
@@ -96,7 +99,7 @@ header{
         background: linear-gradient(167deg, $main 10%, rgba(74,112,119,0.8298669809720763) 50%);
         height:100%;
         clip-path: polygon(0 0, 100% 0, 100% 95%, 0 66%);
-    }
+    }   
 
     #info{
         border-top:solid 1px $white;
@@ -125,6 +128,5 @@ header{
                 margin-left:1rem;
             }
         }
-
     }
 }
