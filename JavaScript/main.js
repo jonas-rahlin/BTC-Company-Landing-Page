@@ -59,4 +59,44 @@ window.onscroll = function() {
     }
 }
 
+//Fetches the current BTC price from API
+const getPrice = async () => {
+    const apiCall = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=USD%2CGBP%2CEUR%2CJPY%2CAUS%2CNZD";
+    const res = await fetch(apiCall);
+    const data = await res.json();
+    console.log(data);
+}
 
+//Displays BTC price on #info-container__price
+function displayPrice() {
+    const selector = document.querySelector("#info-container__currency").selectedIndex;
+    const currency = document.querySelectorAll(".currency-option")[selector].value;
+    const price = document.querySelector("#info-container__price");
+    if(currency === "USD") {
+        price.innerHTML = "123123123";
+    }
+    else if (currency === "GBP") {
+        price.innerHTML = "GBP";
+    }
+
+    else if (currency === "EUR") {
+        price.innerHTML = "EUR";
+    }
+
+    else if (currency === "JPY") {
+        price.innerHTML = "JPY";
+    }
+
+    else if (currency === "AUS") {
+        price.innerHTML = "AUS";
+    }
+
+    else if (currency === "NZD") {
+        price.innerHTML = "NZD";
+    }
+  }
+
+//Checks for change in the Currency Selector
+document.querySelector("#info-container__currency").addEventListener('change', () => {
+    displayPrice();
+  });
