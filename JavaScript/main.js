@@ -61,38 +61,38 @@ window.onscroll = function() {
 
 //Fetches the current BTC price from API
 const getPrice = async () => {
-    const apiCall = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=USD%2CGBP%2CEUR%2CJPY%2CAUS%2CNZD";
+    const apiCall = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=USD%2CGBP%2CEUR%2CJPY";
     const res = await fetch(apiCall);
     const data = await res.json();
-    console.log(data);
+    currentPrice = data.bitcoin;
+    displayPrice();
 }
 
+//Runs the getPrice function once very minute
+window.onload = function() {
+    getPrice();
+    setInterval(()=> {getPrice()},30000);
+} 
+
 //Displays BTC price on #info-container__price
+currentPrice = "";
 function displayPrice() {
     const selector = document.querySelector("#info-container__currency").selectedIndex;
     const currency = document.querySelectorAll(".currency-option")[selector].value;
     const price = document.querySelector("#info-container__price");
     if(currency === "USD") {
-        price.innerHTML = "123123123";
+        price.innerHTML = `1 BTC = ${currentPrice.usd.toString()} $`;
     }
     else if (currency === "GBP") {
-        price.innerHTML = "GBP";
+        price.innerHTML = `1 BTC = ${currentPrice.gbp.toString()} £`;
     }
 
     else if (currency === "EUR") {
-        price.innerHTML = "EUR";
+        price.innerHTML = `1 BTC = ${currentPrice.eur.toString()} €`;
     }
 
     else if (currency === "JPY") {
-        price.innerHTML = "JPY";
-    }
-
-    else if (currency === "AUS") {
-        price.innerHTML = "AUS";
-    }
-
-    else if (currency === "NZD") {
-        price.innerHTML = "NZD";
+        price.innerHTML = `1 BTC = ${currentPrice.jpy.toString()} ¥`;
     }
   }
 
