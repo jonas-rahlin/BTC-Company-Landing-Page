@@ -24,9 +24,9 @@
                   </button>
             </div>
             <ul id="nav-list" class="closed">
-                <li class="nav-list__item"><a class="nav-list__a" href="">Services</a></li>
-                <li class="nav-list__item"><a class="nav-list__a" href="">Support</a></li>
-                <li class="nav-list__item"><a class="nav-list__a" href="">Contact</a></li>
+                <li class="nav-list__item"><a class="nav-list__a" href="">Placeholder</a></li>
+                <li class="nav-list__item"><a class="nav-list__a" href="">Placeholder</a></li>
+                <li class="nav-list__item"><a class="nav-list__a" href="">Placeholder</a></li>
             </ul>
         </nav>
     </header>
@@ -42,20 +42,37 @@
                             <option class="currency-option" value = "GBP">GBP</option>
                             <option class="currency-option" value = "EUR">EUR</option>
                             <option class="currency-option" value = "JPY">JPY</option>
-                            <option class="currency-option" value = "AUS">AUS</option>
-                            <option class="currency-option" value = "NZD">NZD</option>
                             </select>
                         </form>
                     </div>
                 </article>
-                <article id="buy">
-                    
-                </article>
             </div>
         </section>
         <section id="services">
-
+            <article id="buy">
+                <div id="buy-container">
+                    <form>
+                        <label for="amount">Amount</label>
+                        <br>
+                        <input type="text" id="-amount" name="amount">
+                        <select id="info-container__currency" name = "currency-type">
+                            <option class="currency-option" value = "USD">USD</option>
+                            <option class="currency-option" value = "GBP">GBP</option>
+                            <option class="currency-option" value = "EUR">EUR</option>
+                            <option class="currency-option" value = "JPY">JPY</option>
+                        </select>
+                        <br><br>
+                        <label for="converted">Approximated Bitcoin Amount</label>
+                        <br>
+                        <input type="text" id="-converted" name="converted">
+                        <br><br>
+                        <input type="submit" value="Buy Bitcoin">
+                    </form>
+                </div>
+            </article>
         </section>
+        
+        
         <section id="team">
 
         </section>

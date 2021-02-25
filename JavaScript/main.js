@@ -68,7 +68,7 @@ const getPrice = async () => {
     displayPrice();
 }
 
-//Runs the getPrice function once very minute
+//Runs the getPrice function on pageload and then once every 30s
 window.onload = function() {
     getPrice();
     setInterval(()=> {getPrice()},30000);
