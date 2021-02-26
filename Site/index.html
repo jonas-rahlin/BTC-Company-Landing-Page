@@ -34,39 +34,36 @@
         <section id="hero">
             <div id="hero-background">
                 <article id="info">
-                    <div id="info-container">
-                        <span id="info-container__price"></span> 
-                        <form>
-                            <select id="info-container__currency" name = "currency-type">
-                            <option class="currency-option" value = "USD">USD</option>
-                            <option class="currency-option" value = "GBP">GBP</option>
-                            <option class="currency-option" value = "EUR">EUR</option>
-                            <option class="currency-option" value = "JPY">JPY</option>
-                            </select>
-                        </form>
+                    <div class="container">
+                        <span id="info-price"></span> 
+                        <select id="info-currency" name = "currency-type">
+                            <option class="info-currency__option" value = "USD">USD</option>
+                            <option class="info-currency__option" value = "GBP">GBP</option>
+                            <option class="info-currency__option" value = "EUR">EUR</option>
+                            <option class="info-currency__option" value = "JPY">JPY</option>
+                        </select>
                     </div>
                 </article>
             </div>
         </section>
         <section id="services">
             <article id="buy">
-                <div id="buy-container">
-                    <form>
-                        <label for="amount">Amount</label>
-                        <br>
-                        <input type="text" id="-amount" name="amount">
-                        <select id="info-container__currency" name = "currency-type">
-                            <option class="currency-option" value = "USD">USD</option>
-                            <option class="currency-option" value = "GBP">GBP</option>
-                            <option class="currency-option" value = "EUR">EUR</option>
-                            <option class="currency-option" value = "JPY">JPY</option>
-                        </select>
-                        <br><br>
-                        <label for="converted">Approximated Bitcoin Amount</label>
-                        <br>
-                        <input type="text" id="-converted" name="converted">
-                        <br><br>
-                        <input type="submit" value="Buy Bitcoin">
+                <div class="container">
+                    <h2 id="buy-header">Buy Bitcoins</h2>
+                    <form id="buy-form">
+                        <label class="buy-amount" for="amount">Amount (Max. $1000 /week)</label>
+                        <div class="container">
+                            <input type="text" id="buy-amount__input" name="amount" placeholder="0">
+                            <select id="buy-currency" name = "currency-type">
+                                <option class="buy-currency__option" value = "USD">USD</option>
+                                <option class="buy-currency__option" value = "GBP">GBP</option>
+                                <option class="buy-currency__option" value = "EUR">EUR</option>
+                                <option class="buy-currency__option" value = "JPY">JPY</option>
+                            </select>
+                        </div>
+                        <label id="buy-converted" for="converted">Approximated Bitcoin Amount</label>
+                        <input type="text" id="buy-converted__input" name="converted" placeholder="0">
+                        <input id="buy-submit" type="submit" value="NEXT">
                     </form>
                 </div>
             </article>

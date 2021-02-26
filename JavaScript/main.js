@@ -74,12 +74,12 @@ window.onload = function() {
     setInterval(()=> {getPrice()},30000);
 } 
 
-//Displays BTC price on #info-container__price
+//Displays BTC price on #info-price
 currentPrice = "";
 function displayPrice() {
-    const selector = document.querySelector("#info-container__currency").selectedIndex;
-    const currency = document.querySelectorAll(".currency-option")[selector].value;
-    const price = document.querySelector("#info-container__price");
+    const selector = document.querySelector("#info-currency").selectedIndex;
+    const currency = document.querySelectorAll(".info-currency__option")[selector].value;
+    const price = document.querySelector("#info-price");
     if(currency === "USD") {
         price.innerHTML = `1 BTC = ${currentPrice.usd.toString()} $`;
     }
@@ -97,6 +97,6 @@ function displayPrice() {
   }
 
 //Checks for change in the Currency Selector
-document.querySelector("#info-container__currency").addEventListener('change', () => {
+document.querySelector("#info-currency").addEventListener('change', () => {
     displayPrice();
   });

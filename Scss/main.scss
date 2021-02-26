@@ -92,58 +92,122 @@ header{
     background-size: cover;
     background-color:$main;
     height:100vh;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 66%);
     margin:auto;
     &-background{
         background: $main;
         background: linear-gradient(167deg, $main 10%, rgba(74,112,119,0.8298669809720763) 50%);
         height:100%;
-        clip-path: polygon(0 0, 100% 0, 100% 95%, 0 66%);
     }   
 
     #info{
         border-top:solid 1px $white;
-        opacity:75%;
         position:relative;
         top:5rem;
         margin:0 1rem;
         padding:0.5rem 0;
 
-        &-container{
+        .container{
             display:flex;
-            flex-direction:row;
-            justify-content: center;
-            align-items: center;
-            &__price{
-                font-size:1.2rem;
-            }
-    
-            &__currency{
-                display:inline;
-                width:4rem;
-                background-color: rgba(0, 0, 255, 0);
-                border-radius: 3px;
-                font-weight:300;
-                opacity:80%;
-                margin-left:1rem;
-            }
+            justify-content:center;
+        }
+
+        &-price{
+            font-size:1.2rem;
+        }
+
+        &-currency{
+            display:inline;
+            width:4rem;
+            background-color: rgba(0, 0, 255, 0);
+            border-radius: 3px;
+            border:solid 1px $grey 80%;
+            font-weight:300;
+            opacity:80%;
+            margin-left:1rem;
         }
     }
 }
 
 #services{
-    border:solid 1 px black;
     width:100%;
     top:7.5rem;
     position:absolute;
     display:flex;
     justify-content:center;
+    
     #buy{
-        border:solid 1px black;
         border-radius:5px;
-        background:rgba(0, 0, 0, 0.150);
-        margin:1rem;
+        background:$white;
+        margin:2rem;
         width:100%;
-        height:500px;
+        height:70vh;
+        display:flex;
+        align-items:flex-start;
+        justify-content:center;
+        color:$white;
+
+        .container{
+            width:100%;
+        }
+
+        &-header{
+            margin-bottom:1rem;
+            margin-top:0.2rem;
+            color:$black;
+            border-bottom:1px $grey solid;
+            padding:1rem;
+        }
+
+        &-form{
+            display:flex;
+            flex-direction:column;
+            font-weight:300;
+            color:$grey;
+            padding:1rem;
+            font-size:0.8rem;
+
+            & .container{
+                margin-bottom:1rem;
+                margin-top:0.2rem;
+            }
+
+            & input{
+                border:none;
+                border-bottom:solid 1px $grey;
+                background:none;
+                color:$black;
+                height:1.5rem;
+                font-size:1rem;
+                width:100%;
+            }
+
+            #buy-currency{
+                border:none;
+                float:right;
+                color:$black;
+                border-radius: 3px;
+                border:none;
+                font-weight:300;
+                background:none;
+                padding:2px;
+            }
+
+            #buy-submit{
+                background:$secondary;
+                height:2rem;
+                border-radius:5px;
+                color:$black;
+            }
+        }
+
+        &-converted__input{
+            margin-bottom:1rem;
+            margin-top:0.2rem;
+        }
+
+
+
     }
+
+
 }

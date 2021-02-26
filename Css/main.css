@@ -7,7 +7,7 @@
 
 html {
   font-size: 16px;
-  font-family: roboto;
+  font-family: sans-serif;
   color: #0e0d0d;
   background: #f7f7f7;
 }
@@ -195,7 +195,7 @@ header nav #nav-logo__logo {
 }
 
 header nav #nav-logo__logo span {
-  color: #cfe93b;
+  color: #f7931a;
 }
 
 header nav #nav-list {
@@ -251,8 +251,6 @@ header nav #nav-list .nav-list__a:hover {
   background-size: cover;
   background-color: #104750;
   height: 100vh;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 66%);
-          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 66%);
   margin: auto;
 }
 
@@ -260,51 +258,41 @@ header nav #nav-list .nav-list__a:hover {
   background: #104750;
   background: linear-gradient(167deg, #104750 10%, rgba(74, 112, 119, 0.829867) 50%);
   height: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 66%);
-          clip-path: polygon(0 0, 100% 0, 100% 95%, 0 66%);
 }
 
 #hero #info {
   border-top: solid 1px #f7f7f7;
-  opacity: 75%;
   position: relative;
   top: 5rem;
   margin: 0 1rem;
   padding: 0.5rem 0;
 }
 
-#hero #info-container {
+#hero #info .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-#hero #info-container__price {
+#hero #info-price {
   font-size: 1.2rem;
 }
 
-#hero #info-container__currency {
+#hero #info-currency {
   display: inline;
   width: 4rem;
   background-color: rgba(0, 0, 255, 0);
   border-radius: 3px;
+  border: solid 1px #8a8a8a 80%;
   font-weight: 300;
   opacity: 80%;
   margin-left: 1rem;
 }
 
 #services {
-  border: solid 1 px black;
   width: 100%;
   top: 7.5rem;
   position: absolute;
@@ -317,10 +305,83 @@ header nav #nav-list .nav-list__a:hover {
 }
 
 #services #buy {
-  border: solid 1px black;
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.15);
-  margin: 1rem;
+  background: #f7f7f7;
+  margin: 2rem;
   width: 100%;
-  height: 500px;
+  height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #f7f7f7;
+}
+
+#services #buy .container {
+  width: 100%;
+}
+
+#services #buy-header {
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+  color: #0e0d0d;
+  border-bottom: 1px #8a8a8a solid;
+  padding: 1rem;
+}
+
+#services #buy-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 300;
+  color: #8a8a8a;
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+#services #buy-form .container {
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
+}
+
+#services #buy-form input {
+  border: none;
+  border-bottom: solid 1px #8a8a8a;
+  background: none;
+  color: #0e0d0d;
+  height: 1.5rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+#services #buy-form #buy-currency {
+  border: none;
+  float: right;
+  color: #0e0d0d;
+  border-radius: 3px;
+  border: none;
+  font-weight: 300;
+  background: none;
+  padding: 2px;
+}
+
+#services #buy-form #buy-submit {
+  background: #f7931a;
+  height: 2rem;
+  border-radius: 5px;
+  color: #0e0d0d;
+}
+
+#services #buy-converted__input {
+  margin-bottom: 1rem;
+  margin-top: 0.2rem;
 }
