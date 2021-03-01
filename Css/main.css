@@ -169,6 +169,10 @@ header nav {
   padding: 1rem;
 }
 
+header nav #nav-hamburger {
+  z-index: 10;
+}
+
 header nav #nav-logo {
   font-family: ubuntu;
   font-size: 2.5rem;
@@ -200,14 +204,28 @@ header nav #nav-logo__logo span {
 
 header nav #nav-list {
   position: absolute;
-  width: 50%;
-  left: 25%;
-  top: 8rem;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
   list-style: none;
   text-align: center;
-  padding: 1rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 header nav #nav-list.open {
@@ -216,14 +234,12 @@ header nav #nav-list.open {
 }
 
 header nav #nav-list.closed {
-  -webkit-transform: translateY(-40vh);
-          transform: translateY(-40vh);
+  -webkit-transform: translateY(-100vh);
+          transform: translateY(-100vh);
 }
 
 header nav #nav-list .nav-list__item {
-  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
-  padding-bottom: 0.5rem;
-  padding-top: 1rem;
+  padding: 0.5rem;
 }
 
 header nav #nav-list .nav-list__item.black-text {
@@ -320,6 +336,8 @@ header nav #nav-list .nav-list__a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   color: #f7f7f7;
+  -webkit-box-shadow: 0 0 2px #8a8a8a;
+          box-shadow: 0 0 2px #8a8a8a;
 }
 
 #services #buy .container {
@@ -382,7 +400,16 @@ header nav #nav-list .nav-list__a:hover {
   margin-top: 2rem;
 }
 
+#services #buy-form #buy-submit:hover {
+  background-color: #ec8d18;
+}
+
 #services #buy-converted__input {
+  margin-bottom: 2.2rem;
+  margin-top: 0.2rem;
+}
+
+#services #buy-wallet__input {
   margin-bottom: 1rem;
   margin-top: 0.2rem;
 }

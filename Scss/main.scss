@@ -19,6 +19,10 @@ header{
         position:fixed;
         width:100%;
         padding:1rem;
+
+        #nav-hamburger{
+            z-index:10;
+        }
     
         #nav-logo{
             font-family: $font-b;
@@ -42,27 +46,29 @@ header{
     
         #nav-list{
             position:absolute;
-            width:50%;
-            left:25%;
-            top:8rem;
+            width:100%;
+            height:100vh;
+            left:0;
+            top:0;
             list-style: none;
             text-align:center;
-            padding:1rem;
             transition: all 0.3s ease-in-out;
+            background:rgba(0, 0, 0, 0.800);
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
 
             &.open{
                 transform:translateY(0);
             }
 
             &.closed{
-                transform:translateY(-40vh);
+                transform:translateY(-100vh);
             }
 
             .nav-list__item{
-                border-bottom:solid 1px rgba(255, 255, 255, 0.100);
-                padding-bottom:0.5rem;
-                padding-top:1rem;
-
+                padding:0.5rem;
                 &.black-text{
                     border-bottom:solid 1px rgba(0, 0, 0, 0.100);
                 }
@@ -145,6 +151,7 @@ header{
         align-items:flex-start;
         justify-content:center;
         color:$white;
+        box-shadow: 0 0 2px $grey;
 
         .container{
             width:100%;
@@ -198,10 +205,19 @@ header{
                 border-radius:5px;
                 color:$black;
                 margin-top:2rem;
+
+                &:hover{
+                    background-color: $secondary-ascent;
+                }
             }
         }
 
         &-converted__input{
+            margin-bottom:2.2rem;
+            margin-top:0.2rem;
+        }
+
+        &-wallet__input{
             margin-bottom:1rem;
             margin-top:0.2rem;
         }
