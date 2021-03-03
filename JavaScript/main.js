@@ -46,7 +46,7 @@ const getPrice = async () => {
     const res = await fetch(apiCall);
     const data = await res.json();
     currentPrice = data.bitcoin;
-    displayPrice()
+    displayPrice();
 }
 
 //Runs the getPrice function on pageload and then once every 30s
