@@ -20,20 +20,24 @@ window.onscroll = function() {
     const menuItems = document.querySelectorAll(".nav-list__item");
     const menuHamburger = document.querySelector(".hamburger-inner")
     
-    //Logo
     if (window.pageYOffset > 80 && !logo.classList.contains("undisplay")) {
         logo.classList.add("undisplay");
+
+        //For targeting and changing colors on :before and :after elements
+        const styleElem = document.head.appendChild(document.createElement("style"));
+        const styleElem2 = document.head.appendChild(document.createElement("style"));
+        styleElem.innerHTML = ".hamburger-inner {background: black;} .hamburger-inner:before {background: black;} .hamburger-inner:after {background: black;}";
+        styleElem2.innerHTML = ".hamburger.is-active .hamburger-inner {background: black;} .hamburger.is-active .hamburger-inner:after {background: black;}";
+        styleElem.className = "styleElem";
+        styleElem2.className = "styleElem2";
     }
     else if (window.pageYOffset < 80 && logo.classList.contains("undisplay")) {
         logo.classList.remove("undisplay");
+        document.querySelector(".styleElem").remove();
+        document.querySelector(".styleElem2").remove();
     }
-        //For targeting and changing colors on :before and :after elements
-        // const styleElem = document.head.appendChild(document.createElement("style"));
-        // const styleElem2 = document.head.appendChild(document.createElement("style"));
-        // styleElem.innerHTML = ".hamburger-inner {background: black;} .hamburger-inner:before {background: black;} .hamburger-inner:after {background: black;}";
-        // styleElem2.innerHTML = ".hamburger.is-active .hamburger-inner {background: black;} .hamburger.is-active .hamburger-inner:after {background: black;}";
-        // styleElem.className = "styleElem";
-        // styleElem2.className = "styleElem2";
+        
+
 }
 
 //Fetches the current BTC price from API
