@@ -46,7 +46,7 @@ const getPrice = async () => {
     const res = await fetch(apiCall);
     const data = await res.json();
     currentPrice = data.bitcoin;
-    displayPrice();
+    displayPrice()
 }
 
 //Runs the getPrice function on pageload and then once every 30s
@@ -81,3 +81,48 @@ function displayPrice() {
 document.querySelector("#info-currency").addEventListener('change', () => {
     displayPrice();
   });
+
+
+
+//Calculate and display how much bitcoin will be recieved from inputed amount of currency (x)
+const buyAmount = document.querySelector("#buy-amount__input");
+const buySelector = document.querySelector("#buy-currency");
+
+function getBuyAmount() {
+    const buyAmountValue = buyAmount.value;
+    const buySelected = document.querySelector("#buy-currency").selectedIndex;
+    const buyCurrency = document.querySelectorAll(".buy-currency__option")[buySelected].value;
+    
+    function calcRecieveAmount(){
+        const recieveAmountInput = document.querySelector("#buy-converted__input");
+        if(buyCurrency === "USD") {
+            recieveAmountInput.value = buyAmountValue / currentPrice.usd;
+        }
+        else if(buyCurrency === "GBP") {
+            recieveAmountInput.value = buyAmountValue / currentPrice.gbp;
+        }
+        else if(buyCurrency === "EUR") {
+            recieveAmountInput.value = buyAmountValue / currentPrice.eur;
+        }
+        else if(buyCurrency === "JPY") {
+            recieveAmountInput.value = buyAmountValue / currentPrice.jpy;
+        } else{
+            recieveAmountInput.value = 0;
+        }
+    }
+    calcRecieveAmount();
+}
+
+//Trigger getBuyamount() on input and selector change in the buy box.
+[buyAmount, buySelector].forEach(item => {
+    item.addEventListener("change", () => {
+        getBuyAmount();
+    })
+})
+
+
+
+
+
+
+

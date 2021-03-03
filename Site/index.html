@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/main.css">
     <script src="https://kit.fontawesome.com/c6cded4324.js" crossorigin="anonymous"></script>
-    <title>BitBlade</title>
+    <title>Bit Banker</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
     <header>
         <nav id="nav">
             <div id="nav-logo">
-                <span id="nav-logo__logo"><span>Bit</span>Bank</span>
+                <span id="nav-logo__logo"><span>Bit</span>Banker</span>
             </div>
             <div id="nav-hamburger">
                 <button class="hamburger hamburger--slider-r" type="button">
@@ -51,7 +51,7 @@
                 <div class="container">
                     <h2 id="buy-header">Buy Bitcoins</h2>
                     <form id="buy-form">
-                        <label class="buy-amount" for="amount">Amount (Max. $1000 /week)</label>
+                        <label class="buy-amount" for="amount">Buy Amount</label>
                         <div class="container">
                             <input type="text" id="buy-amount__input" name="amount" placeholder="0">
                             <select id="buy-currency" name = "currency-type">
@@ -62,7 +62,7 @@
                             </select>
                         </div>
                         <label id="buy-converted" for="converted">Approximated Bitcoin Amount (at current price)</label>
-                        <input type="text" id="buy-converted__input" name="converted" placeholder="0">
+                        <input type="text" id="buy-converted__input" name="converted" placeholder="0" disabled>
                         <label id="buy-wallet" for="wallet">Wallet Adress</label>
                         <input type="text" id="buy-wallet__input" name="wallet" placeholder="1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2">
                         <input id="buy-submit" type="submit" value="NEXT">
